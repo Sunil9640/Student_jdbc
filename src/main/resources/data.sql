@@ -1,0 +1,1 @@
+insert into Student_details(sid,name,department) values(30,'sunil','CSE');
