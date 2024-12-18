@@ -1,0 +1,220 @@
+git → git is a version distributed version control System
+
+what you mean by version control System
+
+→ CVCS → centralized version control system 
+
+flow → we need to get the copy from CVCS and make changes in code and commit the code to CVCS
+
+DVCS → distrubuted version control System
+
+otherServices like ⇒ github , gitbucket , gitlab   → remote repositories 
+
+old days → collabration like sending Archive files  or sending patches
+
+bitkeepeer → is the eassy process  later linux was  moved to git
+
+git features:
+
+simple , fast and allow branching
+
+fully distributed
+
+---
+
+……………………………………………………………………………………………………………………………………………………..-.
+
+git version ⇒ git    - -version
+
+git has branch and the default is master branch
+
+→ git configurations for the identity of the persion using:
+
+git config:
+
+git config --global --list  → to get the list of configured username and email
+
+to set your personal user :
+
+→ git config  - -global 
+
+Staging Area: where the git know and tracks the files 
+
+……………………………………………………………………………………………..
+
+commit history:→
+
+so we need to create local repository in local mechine:
+
+creating master branch
+
+creating local repositiry :→  git init   → by default it will give master branch
+
+git status ⇒ this will give the local existing repositories
+
+1→ git init ⇒ this will create local repository 
+
+2
+
+………………………………………………………………………………..
+
+creating main branch with git:
+
+→ git init -b main    ⇒ this will create the main branch
+
+--======================================
+
+adding file to staging area
+
+git add <filename>
+
+to add to repository we need to add the files : git add file name like
+
+⇒ git add demo.java
+
+it is not commited yet is it in staging envirnoment 
+
+to unstage use the command ⇒  “ git rm - -cached <filename>  // unstage
+
+=====================================
+
+to check the commit history we can use the command ⇒ git log
+
+⇒ git log 
+
+======================================
+
+commiting the code through git:→
+
+git commit -m “my first project”       // m stand for message
+
+git know the changes made in the code by checksome by SHA1 algorithm ⇒ 
+
+===========================================
+
+flow of the code :→ the code mode from work station to stagging by git add
+
+and then to repository by git commit
+
+==============================
+
+commiting code with out stagging:
+
+git commit  -a -m “ message”            // -a is used to skip the stagging and  -m is used for message
+
+git status will give you modified page 
+
+=================================================
+
+git Skipping the staging Area:→
+
+git commit  -a -m “ message”    
+
+================================
+
+diff command in git: →  git diff is powerful 
+
+git status show the list of files which were modified but git diff will show the exact code and lines which were modified and what were modified.
+
+→  git add pom.xml
+
+once it move to stageing area it will not show git diff changes
+
+→ use git diff - - staged   // this will show the changes in stageing area
+
+*********************************************************************
+
+Remove file form the git:
+
+[readme.md](http://readme.md) ⇒  md → markdown 
+
+**********************************************
+
+adding all file to staging ⇒ git add .
+
+---
+
+---
+
+cloning the repository : →
+
+git clone add httpss link  // syntax
+
+Steps for Pusging the local repository to remote repository :-?
+
+step1 : git init
+
+step 2 : git add readme.md
+
+step 3: git commit -m “first code”
+
+ste 4 :  git branch -M main
+
+step 5: git  remote add origin link of ssh
+
+step 6: git push  -u origin  main 
+
+************************************************************
+
+**important  SSH link vs Https:**
+
+SSH is the secure one and ask for authencation and every time we need to enter credentials
+
+so instead of every time we can use ssh key generation 
+
+command : ssh-keygen -o      // only once we need to do
+
+### …or create a new repository on the command line
+
+```
+echo "# Student_jdbc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Sunil9640/Student_jdbc.gitgit push -u origin main
+```
+
+### …or push an existing repository from the command line
+
+```
+git remote add origin https://github.com/Sunil9640/Student_jdbc.gitgit branch -M main
+git push -u origin main
+
+***All git commands ******
+1.git version ⇒ git    - -version
+2.git config --global --list  
+3. git init   // creates the master repo
+4. git init -b main    // main repo
+5. git rm - -cached <filename>  // unstage
+6. git log --pretty=oneline
+
+```
+
+***********************************************
+
+git tags:
+
+1. git remote -v 
+
+Annotated taggind  or lightweight tagging
+
+commnad: → git tag -a v1.0 -m “1st release of 1.0”
+
+→git show v1.0
+
+***************** Git Branch :  main topic *********→ 
+
+creating the branch in the git 
+
+→ git checkout or git switch
+
+git checkout -b sunil23    → this will create new branch
+
+git switch -c sunil12 → new branch creation
+
+→ git branch -d feature2
+
+*************************
+
+pushing the changes to the local remote repository
